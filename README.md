@@ -3,6 +3,12 @@
 
 ---
 
+## Histórico:
+
+| DATA | AUTOR | DESCRIÇÃO     |
+|--------|-------|------------|
+| 19/04/2026  | Brenda, Gustavo e Matheus   | Configuração da IDE, micropython (UPYcraft), ESP 32 e pesquisa sobre as bibliotecas, códigos, estratégias e protocolo |
+
 ## Estrutura dos arquivos
 
 ```
