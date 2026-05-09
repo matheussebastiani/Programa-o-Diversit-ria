@@ -173,3 +173,37 @@ DHT22          ESP32
 ### PC (voter.py)
 ```bash
 pip install paho-mqtt
+```
+---
+
+## Iniciando o desenvolvimento
+
+No diretório [/src/uPython_test_scripts](/src/uPython_test_scripts), existem scripts de testes que apresentam o funcionamento de alguns módulos necessários para o desenvolvimento do trabalho. Os módulos em questão são os seguintes:
+- Conexão com a rede;
+- Leitura de um sensor (DHT11 foi utilizado como exemplo);
+- Instalação do Mosquitto MQTT para testes locais com a ESP32;
+- Instalação da biblioteca `umqtt.simple` na ESP32.
+
+Para economizar tempo, os scripts [install_mosquitto.sh](/src/uPython_test_scripts/install_mosquitto.sh) e [install_umqtt.py](/src/uPython_test_scripts/install_umqtt.py) foram deixados prontos para simplificar e acelerar a instalação do Mosquitto MQTT, e do `umqtt.simple` na ESP32, respectivamente.
+
+>![NOTE]
+> O script install_mosquitto.sh atualiza o sistema (esperado um sistema Ubuntu 24.04 LTS), instala o Mosquitto MQTT, e  configura para que seja possível a publicação/leitura sem autenticação, e faz com que o Mosquitto utilize a porta 1883.
+
+Para executar o script `install_mosquitto.sh`, faça o seguinte após clonar o repositório:
+
+```sh
+chmod +x install_mosquitto.sh
+./install_mosquitto.sh
+```
+
+Para iniciar os testes, rode no terminal o seguinte comando:
+```sh
+mosquitto_sub -h SEU_IP -t TOPICO_MQTT
+```
+
+Para enviar mensagens pelo MQTT via Mosquitto (para testar se está tudo certinho), utilize o seguinte comando:
+
+```sh
+mosquitto_pub -h SEU_IP -t TOPICO_MQTT -m MENSAGEM
+```
+
