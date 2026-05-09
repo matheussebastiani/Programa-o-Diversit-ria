@@ -5,8 +5,8 @@ import network
 Necessário baixar o script em questão e executá-lo na ESP32 para que a biblioteca de MQTT seja instalado no interpretador Python que roda na ESP32
 '''
 
-SSID = "Greici"
-PSSWD = "Greici20@"
+SSID = ""
+PSSWD = ""
 
 def connect_network():
     wlan = network.WLAN(network.WLAN.IF_STA)

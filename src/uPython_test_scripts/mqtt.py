@@ -3,8 +3,8 @@ from umqtt.simple import MQTTClient
 import random
 import time
 
-SSID = "Greici"
-PSSWD = "Greici20@"
+SSID = ""
+PSSWD = ""
 
 IP_BROKER = "192.168.0.7"
 
@@ -20,7 +20,6 @@ def connect_network():
     print(f"configuracao de rede: {wlan.ipconfig('addr4')}")
     
 def connect_MQTT():
-    global client # Esplicita ao interpretador que client é uma variável global, para efetivamente usá-la
     client = MQTTClient("esp32DHT11", IP_BROKER)
     client.connect()
     print("Conectado ao broker")
