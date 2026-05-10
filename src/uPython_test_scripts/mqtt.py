@@ -31,5 +31,5 @@ client = connect_MQTT()
 while True:
     msg = random.randint(1, 10)
     print(f"Numero gerado: {msg}")
-    client.publish(b"teste/espdth11", str(msg).encode())
+    client.publish(b"teste/espdth11", str(msg).encode('utf-8'))
     time.sleep(1)

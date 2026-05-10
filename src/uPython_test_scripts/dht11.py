@@ -14,7 +14,9 @@ while True:
         
         # Má notícia: o DHT11 pelo uPython não retorna um valor float, apenas um inteiro
         print(f"Temperatura: {temperatura}ºC")
-
+        
+        
+        
     except Exception as e:
         print(f"Erro ao ler o DHT11: {e}")        
         
